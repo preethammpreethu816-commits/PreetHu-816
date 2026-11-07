@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Preetham M(HP) | Portfolio</title>
+
+    <!-- CSS Styling -->
+    <style>
+
+        /* Basic Settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        header {
+            background-color: #14213d;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header h2 {
+            color: #ffffff;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #00b4d8;
+        }
+
+        /* Common Section Styling */
+        section {
+            padding: 65px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            color: #14213d;
+            margin-bottom: 30px;
+        }
+
+        /* Home Section */
+        #home {
+            min-height: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            background-color: #eaf3ff;
+        }
+
+        .home-text {
+            max-width: 550px;
+        }
+
+        .home-text h1 {
+            font-size: 42px;
+            color: #14213d;
+        }
+
+        .home-text h1 span {
+            color: #0077b6;
+        }
+
+        .home-text h3 {
+            font-size: 23px;
+            margin: 10px 0;
+            color: #0077b6;
+        }
+
+        .home-text p {
+            margin: 15px 0 25px;
+            font-size: 17px;
+        }
+
+        /* Profile Image Placeholder */
+        .profile-image {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0077b6, #14213d);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 55px;
+            font-weight: bold;
+            border: 7px solid white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background-color: #0077b6;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #14213d;
+            transform: translateY(-3px);
+        }
+
+        /* About Section */
+        #about {
+            background-color: white;
+            text-align: center;
+        }
+
+        #about p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 17px;
+        }
+
+        /* Education Section */
+        #education {
+            text-align: center;
+        }
+
+        .education-box {
+            background-color: white;
+            max-width: 500px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .education-box h3 {
+            color: #0077b6;
+            margin-bottom: 10px;
+        }
+
+        /* Skills Section */
+        #skills {
+            background-color: white;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .skill {
+            background-color: #eaf3ff;
+            color: #14213d;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            background-color: #0077b6;
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        /* Projects Section */
+        #projects {
+            text-align: center;
+        }
+
+        .project-box {
+            background-color: white;
+            max-width: 500px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .project-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-box h3 {
+            color: #0077b6;
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: white;
+            text-align: center;
+        }
+
+        .contact-info p {
+            margin: 12px 0;
+            font-size: 17px;
+        }
+
+        .contact-info a {
+            color: #0077b6;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 8px;
+            padding: 10px 20px;
+            background-color: #14213d;
+            color: white;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: #0077b6;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #14213d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Mobile Responsive Design */
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+                font-size: 13px;
+            }
+
+            #home {
+                text-align: center;
+                padding: 50px 5%;
+            }
+
+            .home-text h1 {
+                font-size: 32px;
+            }
+
+            .profile-image {
+                width: 200px;
+                height: 200px;
+                font-size: 45px;
+            }
+
+            section {
+                padding: 50px 6%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+
+        <h2>PREETHAM.</h2>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Home Section -->
+    <section id="home">
+
+        <div class="home-text">
+
+            <h3>Hello, Welcome to My Portfolio!</h3>
+
+            <h1>I'm <span>PREETHAM M(HP)</span></h1>
+
+            <h3>BCA Student</h3>
+
+            <p>
+                Always a Good Hearted Person.
+                I am passionate about learning new things,
+                improving my skills and exploring the world.
+            </p>
+
+            <a href="#contact" class="btn">Contact Me</a>
+
+        </div>
+
+        <!-- Profile Image Placeholder -->
+        <div class="profile-image">
+            PM
+        </div>
+
+    </section>
+
+
+    <!-- About Me Section -->
+    <section id="about">
+
+        <h2 class="section-title">About Me</h2>
+
+        <p>
+            Hello! My name is PREETHAM M(HP).
+            I am from Tumakuru and currently pursuing BCA.
+            I am a good-hearted person who believes in kindness,
+            honesty and positivity.
+
+            I enjoy learning new technologies,
+            developing my knowledge and making good memories.
+            My goal is to become successful in my life.
+        </p>
+
+    </section>
+
+
+    <!-- Education Section -->
+    <section id="education">
+
+        <h2 class="section-title">My Education</h2>
+
+        <div class="education-box">
+
+            <h3>Bachelor of Computer Applications (BCA)</h3>
+
+            <p><b>College:</b> SIGS College</p>
+
+            <p><b>Location:</b> Tumakuru</p>
+
+            <p><b>Status:</b> Currently Studying</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Skills Section -->
+    <section id="skills">
+
+        <h2 class="section-title">My Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="skill">C</div>
+
+            <div class="skill">Python</div>
+
+            <div class="skill">HTML</div>
+
+            <div class="skill">CSS</div>
+
+            <div class="skill">Java</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects">
+
+        <h2 class="section-title">My Projects</h2>
+
+        <div class="project-box">
+
+            <h3>Personal Portfolio Website</h3>
+
+            <p>
+                This is my personal portfolio website
+                created using HTML and CSS.
+
+                It showcases my personal information,
+                education, skills and contact details.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+
+        <h2 class="section-title">Contact Me</h2>
+
+        <div class="contact-info">
+
+            <p>
+                <b>Email:</b>
+                <a href="mailto:preethimpreethu67@gmail.com">
+                    preethammpreethu67@gmail.com
+                </a>
+            </p>
+
+            <p>
+                <b>Phone:</b>
+                <a href="tel:9620310062">
+                    9620310062
+                </a>
+            </p>
+
+            <p><b>Location:</b> Tumakuru, Karnataka</p>
+
+            <p><b>Hobbies:</b> Playing Cricket and Traveling ✈️</p>
+
+            <br>
+
+            <a href="mailto:preethammpreethu67@gmail.com"
+               class="btn">
+                Send Me an Email
+            </a>
+
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="social-links">
+
+            <a href="https://www.instagram.com/" target="_blank">
+                Instagram
+            </a>
+
+            <a href="https://www.linkedin.com/" target="_blank">
+                LinkedIn
+            </a>
+
+            <a href="https://github.com/" target="_blank">
+                GitHub
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 PREETHAM M(HP).
+            All Rights Reserved.
+        </p>
+
+        <p>Designed with ❤️ using HTML & CSS</p>
+
+    </footer>
+
+</body>
+</html>
